@@ -1,0 +1,13 @@
+#%RAML 1.0 ResourceType
+usage: Base resource with common methods
+
+post:
+  description: Creates a new resource
+  body:
+    application/json:
+      type: <<requestType>>
+  responses:
+    200:
+      body:
+        application/json:
+          type: <<responseType>>

@@ -1,0 +1,26 @@
+#%RAML 1.0 DataType
+description: Request payload for ChatGPT API
+
+properties:
+  model:
+    type: string
+    required: true
+    example: "gpt-4o-mini"
+  store:
+    type: boolean
+    required: true
+  messages:
+    type: array
+    required: true
+    items:
+      type: object
+      properties:
+        role:
+          type: string
+          required: true
+          enum: [ user, assistant, system ]
+          example: "user"
+        content:
+          type: string
+          required: true
+          example: "Describe MuleSoft in layman terms in 100 words"

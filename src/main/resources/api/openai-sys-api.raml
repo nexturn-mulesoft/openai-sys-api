@@ -1,0 +1,24 @@
+#%RAML 1.0
+title: openai-sys-api
+baseUri: http://localhost:8081
+
+types:
+  ChatGPTRequest: !include datatypes/chatgpt-request.raml
+  ChatGPTResponse: !include datatypes/chatgpt-response.raml
+  WhatsAppRequest: !include datatypes/whatsapp-request.raml
+  WhatsAppResponse: !include datatypes/whatsapp-response.raml
+
+resourceTypes:
+  base: !include resourceTypes/base.raml
+
+/chatgpt:
+  type:
+    base:
+      requestType: ChatGPTRequest
+      responseType: ChatGPTResponse
+
+/whatsapp:
+  type:
+    base:
+      requestType: WhatsAppRequest
+      responseType: WhatsAppResponse
