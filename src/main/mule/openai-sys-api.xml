@@ -125,6 +125,7 @@ output application/json
     </flow>
     <flow name="post:\chatgpt:application\json:openai-sys-api-config">
         <logger level="INFO" message="post:\chatgpt:application\json:openai-sys-api-config" />
+		<logger level="INFO" doc:name="Logger" doc:id="0c974ab4-de53-439b-a2d7-621478240d92" message="#[payload]"/>
 		<http:request method="POST" doc:name="Request" doc:id="d912f0e6-eb16-4d43-8d57-1677b78a4180" url="https://api.openai.com/v1/chat/completions">
 			<http:headers ><![CDATA[#[output application/java
 ---
